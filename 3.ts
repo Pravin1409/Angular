@@ -1,32 +1,24 @@
-//write ts program which contain one function name as maximum.That function aceept array of number and return second largest number
-function main():void
+class Circle
 {
-    var Arr:number[]=[23,89,6,29,56,45,77,32];
-    var ret:number=0;
-    ret=Max(Arr,8);
-    console.log("The second maximum number is:"+ret);
-}
-function Max(ptr:number[],size:number)
-{
-    var i:number=0;
-    var max1:number=0;
-    var max2:number=0;
-
-    for(i=0;i<size;i++)
+    Radius:number;
+    PI:number;
+    constructor(a:number)
     {
-        if(ptr[i]>max1)
-        {
-            max2=max1;
-            max1=ptr[i];
-            
-        }
-        else if(ptr[i]>max2 && ptr[i]<max1)
-        {
-            max2=ptr[i];
-        }
-       
-
+        this.Radius=a;
+        this.PI=3.14;
     }
-    return max2;
 }
-main();
+class CircleX extends Circle
+{
+    Circumferance(Circle)
+    {
+        var Result:number=0;
+        Result=2*this.PI*this.Radius;
+        return Result;
+    }
+}
+var a=new  CircleX(3);
+var ret=a.Circumferance(3);
+console.log("Circumference is:"+ret);
+
+
