@@ -1,17 +1,32 @@
+//write ts program which contain one function name as maximum.That function aceept array of number and return second largest number
 function main():void
 {
-    var no1:number=20;
-    Display(no1);
+    var Arr:number[]=[23,89,6,29,56,45,77,32];
+    var ret:number=0;
+    ret=Max(Arr,8);
+    console.log("The second maximum number is:"+ret);
 }
-function Display(value1:number)
+function Max(ptr:number[],size:number)
 {
     var i:number=0;
-    for(i=1;i<=value1/2;i++)
+    var max1:number=0;
+    var max2:number=0;
+
+    for(i=0;i<size;i++)
     {
-        if(value1%i==0)
+        if(ptr[i]>max1)
         {
-            console.log("the number are:" +i);
+            max2=max1;
+            max1=ptr[i];
+            
         }
+        else if(ptr[i]>max2 && ptr[i]<max1)
+        {
+            max2=ptr[i];
+        }
+       
+
     }
+    return max2;
 }
 main();

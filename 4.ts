@@ -1,21 +1,36 @@
 function main():void
 {
-    var no:number=11;
-    var bret:boolean;
-    bret=CheckPrime(no);
+    var no:number=153;
+    var bret:number=0;;
+    bret=Armstrong(no);
+    console.log("Sum is:"+bret);
     if(bret==true)
     {
-        console.log("Number is Prime");
+        console.log("Armstrong number");
     }
     else
     {
-        console.log("Number is not Prime");
+        console.log("Not Armstrong number");
     }
-    
 }
-function CheckPrime(value:number)
+function Armstrong(no:number)
 {
-    if(value%2!=0)
+    var Digit:number=0;
+    var sum:number=0;
+    var temp:number=no;
+   
+    
+     while(temp!=0)
+     {
+        Digit=temp%10;
+         sum=sum+(Digit*Digit*Digit);
+         temp=temp/10;
+         
+     }
+     
+     
+    
+    if(sum==no)
     {
         return true;
     }
@@ -23,6 +38,9 @@ function CheckPrime(value:number)
     {
         return false;
     }
+    
+ }
 
-}
+
+
 main();

@@ -1,20 +1,27 @@
 function main():void
 {
-    var no:number=21;
-    Display(no);
+    var str:string='Pune kothrud Marvellous infosys';
+    var bret:boolean;
+    bret=Cheack(str);
+    if(bret==true)
+    {
+        console.log("String is their");
+    }
+    else
+    {
+        console.log("String not Found");
+    }
+    
 }
-function Display(value:number)
+function Cheack(value:string)
 {
-   var a=1;
-   var b=1;
-   var c=0;
-   var i=0;
-   for(i=0;i<=value/3;i++)
-   {
-       console.log(a);
-       c=a+b;
-       a=b;
-       b=c;
-   }
+    if(value ==" Marvellous")
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 main();

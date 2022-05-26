@@ -1,15 +1,20 @@
+//Write ts program which contain one function name as summation .The function Accept array of number are return addtion of array
+
 function main():void
 {
-    var radius:number=5;
-    var pi:number=3.14;
+    var Arr:number[]=[23,6,7,4,5,7];
     var ret:number=0;
-    ret=Area(radius,pi);
-    console.log("Area of circle: "+ret);
+    ret=Summation(Arr,6);
+    console.log("Addition of numbers is:"+ret);
 }
-function Area(value1:number,value2:number)
+function Summation(value:number[],size:number)
 {
-    var result:number=0;
-    result=value2*value1*value1;
-    return result;
+    var i:number=0;
+    var sum:number=0;
+    for(i=0;i<size;i++)
+    {
+        sum=sum+value[i];
+    }
+    return sum;
 }
 main();

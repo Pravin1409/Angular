@@ -1,26 +1,24 @@
+// Write a ts program which contain one function name as  Maximum.That Function Acccept numbers and return the largest number 
+
 function main():void
 {
-    var no1:number=89;
-    var no2:number=29;
-    var no3:number=101;
+    var Arr:number[]=[23,89,6,29,56,45,77,32];
     var ret:number=0;
-    ret=Maximum(no1,no2,no3);
+    ret=Maximum(Arr);
     console.log("Maximum number is:"+ret);
 }
-function Maximum(value1:number,value2:number,value3:number)
+function Maximum(value:number[])
 {
-    if(value1>=value2 && value1>=value3)
+    var i:number=0;
+    var max:number=0;
+    max=value[0];
+    for(i=0;i<8;i++)
     {
-        return value1;
+        if(value[i]>max)
+        {
+            max=value[i];
+        }
     }
-    else if(value2>=value1&&value2>=value3)
-    {
-        return value2;
-    }
-    else
-    {
-        return value3;
-    }
-   
+    return max;
 }
 main();
